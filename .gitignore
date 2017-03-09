@@ -250,3 +250,5 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+ObservationTable.pyproj
+__pycache__/ObsTable.cpython-35.pyc
