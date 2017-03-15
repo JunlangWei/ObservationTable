@@ -1,17 +1,29 @@
+from Table import Table
+
 class ObsTable(object):
     """docstring for ObsTable."""
     def __init__(self, Lambda, Alphabet):
         super(ObsTable, self).__init__()
+        self.empty = Lambda
+        self.alphabet = Alphabet
+
         # Label of column - Sufix
         self.E = [Lambda]
+
+
+        # A enlever
         # Label of row - Prefix
         self.S = {Lambda:[1]}
         # Label of row - Prefix.A
         self.SUSA = {}
         # Label for membership queries
         self.MQ = []
-
         self.addSUSA(Alphabet)
+
+        # # Label of row - Prefix
+        # self.S = Table(Lambda, [1])
+        # # Label of row - Prefix.A
+        # self.SUSA = Table()
 
         self.addNewQueries(Alphabet)
 
@@ -51,8 +63,24 @@ class ObsTable(object):
     def isConsistent(self):
         pass
 
+    # Fusion makeClosed et isClosed -> Repetition des deux boucles -> utilisation de ressources
     def makeClosed(self):
-        pass
+        sStr = []
+        for key, item in self.S.items():
+                sStr.append(str(item))
+
+        temp = None
+        for key, item in self.SUSA.items():
+            if str(item) not in sStr:
+                temp = (key, self.SUSA.pop(key))
+                break
+
+        print(temp)
+        self.S[temp[0]] = temp[1]
+
+
+
+
 
     def makeConsistent(self):
         pass
@@ -60,7 +88,7 @@ class ObsTable(object):
 if __name__ == '__main__':
     print("Début des tests")
     Lambda = ' '
-    A = ['0', '1']
+    A = ['a', 'b']
 
     OT = ObsTable(Lambda, A)
 
@@ -71,5 +99,9 @@ if __name__ == '__main__':
     print(OT)
 
     print(OT.isClosed())
+
+    print(OT.makeClosed())
+
+    print(OT)
 
     print("Fin des tests")
