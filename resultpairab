@@ -1,0 +1,134 @@
+Symbol a is present in this automate? (Yes:1 / No: 0)
+Symbol b is present in this automate? (Yes:1 / No: 0)
+Initialisation
+T -> ['']
+ ----- 
+ : [1]
+ ----- 
+a : [0]
+b : [0]
+
+Création de l'automate :
+
+Symbol aa is present in this automate? (Yes:1 / No: 0)
+Symbol ab is present in this automate? (Yes:1 / No: 0)
+T -> ['']
+ ----- 
+ : [1]
+a : [0]
+ ----- 
+b : [0]
+aa : [1]
+ab : [0]
+
+    ['a', 'b']
+ ----- 
+0 : [1, 1]
+1 : [0, 1]
+ ----- 
+
+This is the automate that you want ? (Yes: 1 / No: 0)
+What is the counter-example ? (A : ['a', 'b'])
+Symbol bb is present in this automate? (Yes:1 / No: 0)
+Symbol ba is present in this automate? (Yes:1 / No: 0)
+Symbol bba is present in this automate? (Yes:1 / No: 0)
+Symbol bbb is present in this automate? (Yes:1 / No: 0)
+Symbol aaa is present in this automate? (Yes:1 / No: 0)
+Symbol aba is present in this automate? (Yes:1 / No: 0)
+Symbol baa is present in this automate? (Yes:1 / No: 0)
+Symbol bbaa is present in this automate? (Yes:1 / No: 0)
+Symbol bbba is present in this automate? (Yes:1 / No: 0)
+T -> ['', 'a']
+ ----- 
+ : [1, 0]
+a : [0, 1]
+b : [0, 0]
+bb : [1, 0]
+ ----- 
+aa : [1, 0]
+ab : [0, 0]
+ba : [0, 0]
+bba : [0, 1]
+bbb : [0, 0]
+
+    ['a', 'b']
+ ----- 
+0 : [1, 2]
+1 : [0, 2]
+2 : [2, 0]
+ ----- 
+
+This is the automate that you want ? (Yes: 1 / No: 0)
+What is the counter-example ? (A : ['a', 'b'])
+Symbol abb is present in this automate? (Yes:1 / No: 0)
+Symbol abba is present in this automate? (Yes:1 / No: 0)
+Symbol abbb is present in this automate? (Yes:1 / No: 0)
+Symbol abaa is present in this automate? (Yes:1 / No: 0)
+Symbol abbaa is present in this automate? (Yes:1 / No: 0)
+Symbol abbba is present in this automate? (Yes:1 / No: 0)
+Symbol aab is present in this automate? (Yes:1 / No: 0)
+Symbol bab is present in this automate? (Yes:1 / No: 0)
+Symbol bbab is present in this automate? (Yes:1 / No: 0)
+Symbol bbbb is present in this automate? (Yes:1 / No: 0)
+Symbol abab is present in this automate? (Yes:1 / No: 0)
+Symbol abbab is present in this automate? (Yes:1 / No: 0)
+Symbol abbbb is present in this automate? (Yes:1 / No: 0)
+T -> ['', 'a', 'b']
+ ----- 
+ : [1, 0, 0]
+a : [0, 1, 0]
+b : [0, 0, 1]
+bb : [1, 0, 0]
+ab : [0, 0, 0]
+abb : [0, 1, 0]
+ ----- 
+aa : [1, 0, 0]
+ba : [0, 0, 0]
+bba : [0, 1, 0]
+bbb : [0, 0, 1]
+aba : [0, 0, 1]
+abba : [1, 0, 0]
+abbb : [0, 0, 0]
+
+    ['a', 'b']
+ ----- 
+0 : [1, 2]
+1 : [0, 3]
+2 : [3, 0]
+3 : [2, 1]
+ ----- 
+
+This is the automate that you want ? (Yes: 1 / No: 0)
+[3;J[H[2J===== ===== ===== ===== ===== =====
+
+Final Observation table :
+T -> ['', 'a', 'b']
+ ----- 
+ : [1, 0, 0]
+a : [0, 1, 0]
+b : [0, 0, 1]
+bb : [1, 0, 0]
+ab : [0, 0, 0]
+abb : [0, 1, 0]
+ ----- 
+aa : [1, 0, 0]
+ba : [0, 0, 0]
+bba : [0, 1, 0]
+bbb : [0, 0, 1]
+aba : [0, 0, 1]
+abba : [1, 0, 0]
+abbb : [0, 0, 0]
+
+----- ----- ----- ----- ----- -----
+
+Final Automata :
+    ['a', 'b']
+ ----- 
+0 : [1, 2]
+1 : [0, 3]
+2 : [3, 0]
+3 : [2, 1]
+ ----- 
+
+===== ===== ===== ===== ===== =====
+
