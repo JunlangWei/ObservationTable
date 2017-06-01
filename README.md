@@ -14,6 +14,7 @@ python3 LStar.py
 
 ### Launch with an example :
 python3 LStar.py < testpairab
+
 python3 LStar.py < testfinalabcd.txt
 
 ### Report and explication in french : Rapport LStar - Dana Angluin
